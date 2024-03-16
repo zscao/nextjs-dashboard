@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/_next/static/css/app/layout.css?v=1710567837853"
+    data-precedence="next_static/css/app/layout.css" />
+  <link rel="stylesheet" href="/_next/static/css/app/dashboard/layout.css?v=1710567837853"
+    data-precedence="next_static/css/app/dashboard/layout.css" />
+  <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack.js?v=1710567837853" />
+  <script src="/_next/static/chunks/main-app.js?v=1710567837853" async=""></script>
+  <script src="/_next/static/chunks/app-pages-internals.js" async=""></script>
+  <script src="/_next/static/chunks/app/dashboard/invoices/page.js" async=""></script>
+  <script src="/_next/static/chunks/app/dashboard/layout.js" async=""></script>
+  <script src="/_next/static/chunks/polyfills.js" noModule=""></script>
+</head>
+
+<body class="__className_aaf875 antialiased">
+  <div class="flex h-screen flex-col md:flex-row md:overflow-hidden">
+    <div class="w-full flex-none md:w-64">
+      <div class="flex h-full flex-col px-3 py-4 md:px-2"><a
+          class="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40" href="/">
+          <div class="w-32 text-white md:w-40">
+            <div class="__className_b1417b flex flex-row items-center leading-none text-white"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" class="h-12 w-12 rotate-[15deg]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418">
+                </path>
+              </svg>
+              <p class="text-[44px]">Acme</p>
+            </div>
+          </div>
+        </a>
+        <div class="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2"><a
+            class="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
+            href="/dashboard"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true" class="w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+              </path>
+            </svg>
+            <p class="hidden md:block">Home</p>
+          </a><a
+            class="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3 bg-sky-100 text-blue-600"
+            href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75">
+              </path>
+            </svg>
+            <p class="hidden md:block">Invoices</p>
+          </a><a
+            class="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
+            href="/dashboard/customers"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z">
+              </path>
+            </svg>
+            <p class="hidden md:block">Customers</p>
+          </a>
+          <div class="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+          <form><button
+              class="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" class="w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9"></path>
+              </svg>
+              <div class="hidden md:block">Sign Out</div>
+            </button></form>
+        </div>
+      </div>
+    </div>
+    <div class="flex-grow p-6 md:overflow-y-auto md:p-12">
+      <div class="w-full">
+        <div class="flex w-full items-center justify-between">
+          <h1 class="__className_b1417b text-2xl">Invoices</h1>
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-2 md:mt-8">
+          <div class="relative flex flex-1 flex-shrink-0"><label for="search" class="sr-only">Search</label><input
+              class="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+              placeholder="Search invoices..." value="a" /><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+              class="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+            </svg></div><a
+            class="flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            href="/dashboard/invoices/create"><span class="hidden md:block">Create Invoice</span> <svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true" class="h-5 md:ml-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+            </svg></a>
+        </div><!--$?--><template id="B:0"></template>
+        <div class="mt-6 flow-root">
+          <div class="inline-block min-w-full align-middle">
+            <div class="rounded-lg bg-gray-50 p-2 md:pt-0">
+              <div class="md:hidden">
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2 w-full rounded-md bg-white p-4">
+                  <div class="flex items-center justify-between border-b border-gray-100 pb-8">
+                    <div class="flex items-center">
+                      <div class="mr-2 h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div class="flex w-full items-center justify-between pt-4">
+                    <div>
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                      <div class="mt-2 h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                      <div class="h-10 w-10 rounded bg-gray-100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <table class="hidden min-w-full text-gray-900 md:table">
+                <thead class="rounded-lg text-left text-sm font-normal">
+                  <tr>
+                    <th scope="col" class="px-4 py-5 font-medium sm:pl-6">Customer</th>
+                    <th scope="col" class="px-3 py-5 font-medium">Email</th>
+                    <th scope="col" class="px-3 py-5 font-medium">Amount</th>
+                    <th scope="col" class="px-3 py-5 font-medium">Date</th>
+                    <th scope="col" class="px-3 py-5 font-medium">Status</th>
+                    <th scope="col" class="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6"><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white">
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="w-full border-b border-gray-100 last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                    <td class="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div class="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-32 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                      <div class="h-6 w-16 rounded bg-gray-100"></div>
+                    </td>
+                    <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                      <div class="flex justify-end gap-3">
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                        <div class="h-[38px] w-[38px] rounded bg-gray-100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!--/$-->
+        <div class="mt-5 flex w-full justify-center">
+          <div class="inline-flex">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-md border pointer-events-none text-gray-300 mr-2 md:mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" class="w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+              </svg></div>
+            <div class="flex -space-x-px">
+              <div
+                class="flex h-10 w-10 items-center justify-center text-sm border rounded-l-md z-10 bg-blue-600 border-blue-600 text-white">
+                1</div><a class="flex h-10 w-10 items-center justify-center text-sm border hover:bg-gray-100"
+                href="/dashboard/invoices?page=2&amp;query=a">2</a><a
+                class="flex h-10 w-10 items-center justify-center text-sm border rounded-r-md hover:bg-gray-100"
+                href="/dashboard/invoices?page=3&amp;query=a">3</a>
+            </div><a class="flex h-10 w-10 items-center justify-center rounded-md border hover:bg-gray-100 ml-2 md:ml-4"
+              href="/dashboard/invoices?page=2&amp;query=a"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/_next/static/chunks/webpack.js?v=1710567837853" async=""></script>
+  <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
+  <script>self.__next_f.push([1, "1:HL[\"/_next/static/css/app/layout.css?v=1710567837853\",\"style\"]\n0:\"$L2\"\n"])</script>
+  <script>self.__next_f.push([1, "3:HL[\"/_next/static/css/app/dashboard/layout.css?v=1710567837853\",\"style\"]\n"])</script>
+  <script>self.__next_f.push([1, "4:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/app-router.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n6:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n7:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n8:I[\"(app-pages-browser)/./node_modules/next/dist/clien"])</script>
+  <script>self.__next_f.push([1, "t/components/render-from-template-context.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n9:I[\"(app-pages-browser)/./node_modules/next/dist/client/link.js\",[\"app/dashboard/invoices/page\",\"static/chunks/app/dashboard/invoices/page.js\"],\"\"]\na:I[\"(app-pages-browser)/./app/ui/dashboard/nav-links.tsx\",[\"app/dashboard/layout\",\"static/chunks/app/dashboard/layout.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "2:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/app/layout.css?v=1710567837853\",\"precedence\":\"next_static/css/app/layout.css\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L4\",null,{\"buildId\":\"development\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/dashboard/invoices?page=1\u0026query=a\",\"initialTree\":[\"\",{\"children\":[\"dashboard\",{\"children\":[\"invoices\",{\"children\":[\"__PAGE__?{\\\"page\\\":\\\"1\\\",\\\"query\\\":\\\"a\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialHead\":[false,\"$L5\"],\"globalErrorComponent\":\"$6\",\"children\":[null,[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__className_aaf875 antialiased\",\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"childProp\":{\"current\":[null,[\"$\",\"div\",null,{\"className\":\"flex h-screen flex-col md:flex-row md:overflow-hidden\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-full flex-none md:w-64\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex h-full flex-col px-3 py-4 md:px-2\",\"children\":[[\"$\",\"$L9\",null,{\"className\":\"mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40\",\"href\":\"/\",\"children\":[\"$\",\"div\",null,{\"className\":\"w-32 text-white md:w-40\",\"children\":[\"$\",\"div\",null,{\"className\":\"__className_b1417b flex flex-row items-center leading-none text-white\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"h-12 w-12 rotate-[15deg]\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-[44px]\",\"children\":\"Acme\"}]]}]}]}],[\"$\",\"div\",null,{\"className\":\"flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2\",\"children\":[[\"$\",\"$La\",null,{}],[\"$\",\"div\",null,{\"className\":\"hidden h-auto w-full grow rounded-md bg-gray-50 md:block\"}],[\"$\",\"form\",null,{\"children\":[\"$\",\"button\",null,{\"className\":\"flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-6\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M5.636 5.636a9 9 0 1012.728 0M12 3v9\"}]]}],[\"$\",\"div\",null,{\"className\":\"hidden md:block\",\"children\":\"Sign Out\"}]]}]}]]}]]}]}],[\"$\",\"div\",null,{\"className\":\"flex-grow p-6 md:overflow-y-auto md:p-12\",\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"dashboard\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"childProp\":{\"current\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"dashboard\",\"children\",\"invoices\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"childProp\":{\"current\":[\"$Lb\",\"$Lc\",null],\"segment\":\"__PAGE__?{\\\"page\\\":\\\"1\\\",\\\"query\\\":\\\"a\\\"}\"},\"styles\":null}],\"segment\":\"invoices\"},\"styles\":null}]}]]}],null],\"segment\":\"dashboard\"},\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/app/dashboard/layout.css?v=1710567837853\",\"precedence\":\"next_static/css/app/dashboard/layout.css\",\"crossOrigin\":\"$undefined\"}]]}]}]}],null]}]]\n"])</script>
+  <script>self.__next_f.push([1, "d:I[\"(app-pages-browser)/./app/ui/search.tsx\",[\"app/dashboard/invoices/page\",\"static/chunks/app/dashboard/invoices/page.js\"],\"\"]\ne:\"$Sreact.suspense\"\n10:I[\"(app-pages-browser)/./app/ui/invoices/pagination.tsx\",[\"app/dashboard/invoices/page\",\"static/chunks/app/dashboard/invoices/page.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "c:[\"$\",\"div\",null,{\"className\":\"w-full\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between\",\"children\":[\"$\",\"h1\",null,{\"className\":\"__className_b1417b text-2xl\",\"children\":\"Invoices\"}]}],[\"$\",\"div\",null,{\"className\":\"mt-4 flex items-center justify-between gap-2 md:mt-8\",\"children\":[[\"$\",\"$Ld\",null,{\"placeholder\":\"Search invoices...\"}],[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices/create\",\"className\":\"flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600\",\"children\":[[\"$\",\"span\",null,{\"className\":\"hidden md:block\",\"children\":\"Create Invoice\"}],\" \",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"h-5 md:ml-4\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 4.5v15m7.5-7.5h-15\"}]]}]]}]]}],[\"$\",\"$e\",\"a1\",{\"fallback\":[\"$\",\"div\",null,{\"className\":\"mt-6 flow-root\",\"children\":[\"$\",\"div\",null,{\"className\":\"inline-block min-w-full align-middle\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-lg bg-gray-50 p-2 md:pt-0\",\"children\":[[\"$\",\"div\",null,{\"className\":\"md:hidden\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b border-gray-100 pb-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mr-2 h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"mt-2 h-6 w-24 rounded bg-gray-100\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-10 w-10 rounded bg-gray-100\"}]]}]]}]]}]]}],[\"$\",\"table\",null,{\"className\":\"hidden min-w-full text-gray-900 md:table\",\"children\":[[\"$\",\"thead\",null,{\"className\":\"rounded-lg text-left text-sm font-normal\",\"children\":[\"$\",\"tr\",null,{\"children\":[[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-4 py-5 font-medium sm:pl-6\",\"children\":\"Customer\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Email\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Amount\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Date\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Status\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"relative pb-4 pl-3 pr-6 pt-2 sm:pr-6\",\"children\":[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Edit\"}]}]]}]}],[\"$\",\"tbody\",null,{\"className\":\"bg-white\",\"children\":[[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}],[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}],[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}],[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}],[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}],[\"$\",\"tr\",null,{\"className\":\"w-full border-b border-gray-100 last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-8 w-8 rounded-full bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-6 w-24 rounded bg-gray-100\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-32 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"h-6 w-16 rounded bg-gray-100\"}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}],[\"$\",\"div\",null,{\"className\":\"h-[38px] w-[38px] rounded bg-gray-100\"}]]}]}]]}]]}]]}]]}]}]}],\"children\":\"$Lf\"}],[\"$\",\"div\",null,{\"className\":\"mt-5 flex w-full justify-center\",\"children\":[\"$\",\"$L10\",null,{\"totalPages\":3}]}]]}]\n"])</script>
+  <script>self.__next_f.push([1, "5:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}]]\nb:null\n"])</script>
+  <script>self.__next_f.push([1, "11:I[\"(app-pages-browser)/./node_modules/next/dist/client/image-component.js\",[\"app/dashboard/invoices/page\",\"static/chunks/app/dashboard/invoices/page.js\"],\"Image\"]\n"])</script>
+  <script>self.__next_f.push([1, "f:[\"$\",\"div\",null,{\"className\":\"mt-6 flow-root\",\"children\":[\"$\",\"div\",null,{\"className\":\"inline-block min-w-full align-middle\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-lg bg-gray-50 p-2 md:pt-0\",\"children\":[[\"$\",\"div\",null,{\"className\":\"md:hidden\",\"children\":[[\"$\",\"div\",\"d288f4ab-4315-4074-adbf-205ffc32d7ab\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/delba-de-oliveira.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Delba de Oliveira's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Delba de Oliveira\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"delba@oliveira.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$89.45\"}],[\"$\",\"p\",null,{\"children\":\"Oct 4, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}],[\"$\",\"div\",\"5bbff17b-4d5d-449a-b419-2ca909999d3c\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/steven-tey.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Steven Tey's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Steven Tey\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"steven@tey.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$448.00\"}],[\"$\",\"p\",null,{\"children\":\"Sep 10, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}],[\"$\",\"div\",\"f21e65c4-0363-43d7-93f0-8099c2e22dc2\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/lee-robinson.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Lee Robinson's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Lee Robinson\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"lee@robinson.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$5.00\"}],[\"$\",\"p\",null,{\"children\":\"Aug 19, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}],[\"$\",\"div\",\"2bde96d1-6490-45a3-a6df-935166ba7414\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/michael-novotny.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Michael Novotny's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Michael Novotny\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"michael@novotny.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$345.77\"}],[\"$\",\"p\",null,{\"children\":\"Aug 5, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}],[\"$\",\"div\",\"734470ed-ab65-499b-abfc-cf44ae177b85\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/emil-kowalski.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Emil Kowalski's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Emil Kowalski\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"emil@kowalski.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$542.46\"}],[\"$\",\"p\",null,{\"children\":\"Jul 16, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}],[\"$\",\"div\",\"f1469973-c9a5-4fb1-8637-eaae1340c523\",{\"className\":\"mb-2 w-full rounded-md bg-white p-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center justify-between border-b pb-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/evil-rabbit.png\",\"className\":\"mr-2 rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Evil Rabbit's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Evil Rabbit\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-gray-500\",\"children\":\"evil@rabbit.com\"}]]}],[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]]}],[\"$\",\"div\",null,{\"className\":\"flex w-full items-center justify-between pt-4\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"text-xl font-medium\",\"children\":\"$$6.66\"}],[\"$\",\"p\",null,{\"children\":\"Jun 27, 2023\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-2\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]]}]]}]]}],[\"$\",\"table\",null,{\"className\":\"hidden min-w-full text-gray-900 md:table\",\"children\":[[\"$\",\"thead\",null,{\"className\":\"rounded-lg text-left text-sm font-normal\",\"children\":[\"$\",\"tr\",null,{\"children\":[[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-4 py-5 font-medium sm:pl-6\",\"children\":\"Customer\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Email\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Amount\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Date\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"px-3 py-5 font-medium\",\"children\":\"Status\"}],[\"$\",\"th\",null,{\"scope\":\"col\",\"className\":\"relative py-3 pl-6 pr-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Edit\"}]}]]}]}],[\"$\",\"tbody\",null,{\"className\":\"bg-white\",\"children\":[[\"$\",\"tr\",\"d288f4ab-4315-4074-adbf-205ffc32d7ab\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/delba-de-oliveira.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Delba de Oliveira's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Delba de Oliveira\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"delba@oliveira.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$89.45\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Oct 4, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}],[\"$\",\"tr\",\"5bbff17b-4d5d-449a-b419-2ca909999d3c\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/steven-tey.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Steven Tey's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Steven Tey\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"steven@tey.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$448.00\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Sep 10, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}],[\"$\",\"tr\",\"f21e65c4-0363-43d7-93f0-8099c2e22dc2\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/lee-robinson.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Lee Robinson's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Lee Robinson\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"lee@robinson.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$5.00\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Aug 19, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white\",\"children\":[null,[\"Paid\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-white\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M4.5 12.75l6 6 9-13.5\"}]]}]]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}],[\"$\",\"tr\",\"2bde96d1-6490-45a3-a6df-935166ba7414\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/michael-novotny.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Michael Novotny's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Michael Novotny\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"michael@novotny.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$345.77\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Aug 5, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}],[\"$\",\"tr\",\"734470ed-ab65-499b-abfc-cf44ae177b85\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/emil-kowalski.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Emil Kowalski's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Emil Kowalski\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"emil@kowalski.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$542.46\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Jul 16, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}],[\"$\",\"tr\",\"f1469973-c9a5-4fb1-8637-eaae1340c523\",{\"className\":\"w-full border-b py-3 text-sm last-of-type:border-none [\u0026:first-child\u003etd:first-child]:rounded-tl-lg [\u0026:first-child\u003etd:last-child]:rounded-tr-lg [\u0026:last-child\u003etd:first-child]:rounded-bl-lg [\u0026:last-child\u003etd:last-child]:rounded-br-lg\",\"children\":[[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center gap-3\",\"children\":[[\"$\",\"$L11\",null,{\"src\":\"/customers/evil-rabbit.png\",\"className\":\"rounded-full\",\"width\":28,\"height\":28,\"alt\":\"Evil Rabbit's profile picture\"}],[\"$\",\"p\",null,{\"children\":\"Evil Rabbit\"}]]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"evil@rabbit.com\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"$$6.66\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":\"Jun 27, 2023\"}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap px-3 py-3\",\"children\":[\"$\",\"span\",null,{\"className\":\"inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500\",\"children\":[[\"Pending\",[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"ml-1 w-4 text-gray-500\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\"}]]}]],null]}]}],[\"$\",\"td\",null,{\"className\":\"whitespace-nowrap py-3 pl-6 pr-3\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-end gap-3\",\"children\":[[\"$\",\"$L9\",null,{\"href\":\"/dashboard/invoices\",\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125\"}]]}]}],[\"$\",\"button\",null,{\"className\":\"rounded-md border p-2 hover:bg-gray-100\",\"children\":[[\"$\",\"span\",null,{\"className\":\"sr-only\",\"children\":\"Delete\"}],[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"fill\":\"none\",\"viewBox\":\"0 0 24 24\",\"strokeWidth\":1.5,\"stroke\":\"currentColor\",\"aria-hidden\":\"true\",\"aria-labelledby\":\"$undefined\",\"className\":\"w-5\",\"children\":[null,[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"d\":\"M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0\"}]]}]]}]]}]}]]}]]}]]}]]}]}]}]\n"])</script>
+  <script>self.__next_f.push([1, ""])</script>
+  <div hidden id="S:0">
+    <div class="mt-6 flow-root">
+      <div class="inline-block min-w-full align-middle">
+        <div class="rounded-lg bg-gray-50 p-2 md:pt-0">
+          <div class="md:hidden">
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Delba de Oliveira&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=64&amp;q=75" />
+                    <p>Delba de Oliveira</p>
+                  </div>
+                  <p class="text-sm text-gray-500">delba@oliveira.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$89.45</p>
+                  <p>Oct 4, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Steven Tey&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=64&amp;q=75" />
+                    <p>Steven Tey</p>
+                  </div>
+                  <p class="text-sm text-gray-500">steven@tey.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$448.00</p>
+                  <p>Sep 10, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Lee Robinson&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=64&amp;q=75" />
+                    <p>Lee Robinson</p>
+                  </div>
+                  <p class="text-sm text-gray-500">lee@robinson.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$5.00</p>
+                  <p>Aug 19, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Michael Novotny&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=64&amp;q=75" />
+                    <p>Michael Novotny</p>
+                  </div>
+                  <p class="text-sm text-gray-500">michael@novotny.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$345.77</p>
+                  <p>Aug 5, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Emil Kowalski&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=64&amp;q=75" />
+                    <p>Emil Kowalski</p>
+                  </div>
+                  <p class="text-sm text-gray-500">emil@kowalski.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$542.46</p>
+                  <p>Jul 16, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="mb-2 w-full rounded-md bg-white p-4">
+              <div class="flex items-center justify-between border-b pb-4">
+                <div>
+                  <div class="mb-2 flex items-center"><img alt="Evil Rabbit&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="mr-2 rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=64&amp;q=75" />
+                    <p>Evil Rabbit</p>
+                  </div>
+                  <p class="text-sm text-gray-500">evil@rabbit.com</p>
+                </div><span
+                  class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg></span>
+              </div>
+              <div class="flex w-full items-center justify-between pt-4">
+                <div>
+                  <p class="text-xl font-medium">$6.66</p>
+                  <p>Jun 27, 2023</p>
+                </div>
+                <div class="flex justify-end gap-2"><a class="rounded-md border p-2 hover:bg-gray-100"
+                    href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                      </path>
+                    </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                      class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                      </path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <table class="hidden min-w-full text-gray-900 md:table">
+            <thead class="rounded-lg text-left text-sm font-normal">
+              <tr>
+                <th scope="col" class="px-4 py-5 font-medium sm:pl-6">Customer</th>
+                <th scope="col" class="px-3 py-5 font-medium">Email</th>
+                <th scope="col" class="px-3 py-5 font-medium">Amount</th>
+                <th scope="col" class="px-3 py-5 font-medium">Date</th>
+                <th scope="col" class="px-3 py-5 font-medium">Status</th>
+                <th scope="col" class="relative py-3 pl-6 pr-3"><span class="sr-only">Edit</span></th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Delba de Oliveira&#x27;s profile picture"
+                      loading="lazy" width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fdelba-de-oliveira.png&amp;w=64&amp;q=75" />
+                    <p>Delba de Oliveira</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">delba@oliveira.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$89.45</td>
+                <td class="whitespace-nowrap px-3 py-3">Oct 4, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Steven Tey&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fsteven-tey.png&amp;w=64&amp;q=75" />
+                    <p>Steven Tey</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">steven@tey.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$448.00</td>
+                <td class="whitespace-nowrap px-3 py-3">Sep 10, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Lee Robinson&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Flee-robinson.png&amp;w=64&amp;q=75" />
+                    <p>Lee Robinson</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">lee@robinson.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$5.00</td>
+                <td class="whitespace-nowrap px-3 py-3">Aug 19, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-green-500 text-white">Paid<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Michael Novotny&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fmichael-novotny.png&amp;w=64&amp;q=75" />
+                    <p>Michael Novotny</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">michael@novotny.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$345.77</td>
+                <td class="whitespace-nowrap px-3 py-3">Aug 5, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Emil Kowalski&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Femil-kowalski.png&amp;w=64&amp;q=75" />
+                    <p>Emil Kowalski</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">emil@kowalski.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$542.46</td>
+                <td class="whitespace-nowrap px-3 py-3">Jul 16, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr
+                class="w-full border-b py-3 text-sm last-of-type:border-none [&amp;:first-child&gt;td:first-child]:rounded-tl-lg [&amp;:first-child&gt;td:last-child]:rounded-tr-lg [&amp;:last-child&gt;td:first-child]:rounded-bl-lg [&amp;:last-child&gt;td:last-child]:rounded-br-lg">
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex items-center gap-3"><img alt="Evil Rabbit&#x27;s profile picture" loading="lazy"
+                      width="28" height="28" decoding="async" data-nimg="1" class="rounded-full"
+                      style="color:transparent"
+                      srcSet="/_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=64&amp;q=75 2x"
+                      src="/_next/image?url=%2Fcustomers%2Fevil-rabbit.png&amp;w=64&amp;q=75" />
+                    <p>Evil Rabbit</p>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-3">evil@rabbit.com</td>
+                <td class="whitespace-nowrap px-3 py-3">$6.66</td>
+                <td class="whitespace-nowrap px-3 py-3">Jun 27, 2023</td>
+                <td class="whitespace-nowrap px-3 py-3"><span
+                    class="inline-flex items-center rounded-full px-2 py-1 text-xs bg-gray-100 text-gray-500">Pending<svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true" class="ml-1 w-4 text-gray-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg></span></td>
+                <td class="whitespace-nowrap py-3 pl-6 pr-3">
+                  <div class="flex justify-end gap-3"><a class="rounded-md border p-2 hover:bg-gray-100"
+                      href="/dashboard/invoices"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125">
+                        </path>
+                      </svg></a><button class="rounded-md border p-2 hover:bg-gray-100"><span
+                        class="sr-only">Delete</span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0">
+                        </path>
+                      </svg></button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>$RC = function (b, c, e) { c = document.getElementById(c); c.parentNode.removeChild(c); var a = document.getElementById(b); if (a) { b = a.previousSibling; if (e) b.data = "$!", a.setAttribute("data-dgst", e); else { e = b.parentNode; a = b.nextSibling; var f = 0; do { if (a && 8 === a.nodeType) { var d = a.data; if ("/$" === d) if (0 === f) break; else f--; else "$" !== d && "$?" !== d && "$!" !== d || f++ } d = a.nextSibling; e.removeChild(a); a = d } while (a); for (; c.firstChild;)e.insertBefore(c.firstChild, a); b.data = "$" } b._reactRetry && b._reactRetry() } }; $RC("B:0", "S:0")</script>
+</body>
+
+</html>
